@@ -1,0 +1,114 @@
+
+.maindiv {
+    height: 750px;
+}
+
+h1 {
+    font-size:25px;
+    font-family: Georgia;
+    color: black;
+    font-style:italic;
+    font-weight:bold;
+}
+
+.TopLine {
+    height: 3px;
+    background-color: black;
+    border-color: crimson;
+}
+
+.IULogo {
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.heading, .IULogo{
+    display: inline-block;
+}
+
+.info {
+    margin:auto;
+}
+
+
+/*
+.Introduction { 
+    position: relative; 
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items:normal;
+    justify-content: center;
+    background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/crm/bloomington/Sample-Gates_4478802b-5056-a36a-06180ee91f953fc5.jpg");
+    background-size: cover;
+}
+
+.Introduction::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+}*/
+  
+
+h3 {
+    font-size: 30px;
+    color: black;
+}
+
+.buttons {
+    padding:10px;
+    font-weight: bold;
+}
+
+.bottom-line {
+    height: 2px;
+    background-color: black;
+    border-color: crimson;
+}
+
+p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+.container {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 2px 15px rgba(0,0,0,1)
+}
+
+input {
+    box-shadow: 0 0 3px rgba(0,0,0,1);
+    width: 200px;
+    border-radius: 3px;
+}
+
+input::placeholder {
+    font-weight: bold;
+}
+
+select {
+    box-shadow: 0 0 7px rgba(0,0,0,1);
+    width: 80px;
+    font-weight: bold;
+}
+
+.output-container {
+    margin-top: 25px;
+    border: none;
+    /* box-shadow: 0 5px 10px rgba(0,0,0,1); */
+    border-radius: 3px;
+}
+
+.input-container {
+    margin:auto;
+}
+
+

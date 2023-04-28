@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <!--Title-->
+        <title>Home Page, IUB Admit Predictor!</title>
+        <!--CSS-->
+        <!-- <link  href="styles.css" rel="stylesheet"/> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    </div>
+
+    </head>
+    <body>
+        <div class="maindiv">
+            <main>
+                <div class="container">
+                    <img class = "IULogo" src="{{ url_for('static', filename='img/PngItem_1760330.png')}}" width="2%" height="2%" alt="IUB Logo"/>
+                    <h1 class="heading">IU Admit Predictor and University recommendations </h1>
+                    <hr class="TopLine"/>
+                </div>
+                <!-- <div class="images-container" style="margin:auto">
+                    <img class = "IULogo" src="DP.png" width="8%" height="2%" alt="IUB Logo"/>
+                    <img class = "IULogo" src="PE.png" width="8%" height="4%" alt="IUB Logo"/>
+                    <img class = "IULogo" src="PngItem_1760330.png" width="4%" height="2%" alt="IUB Logo"/>
+                </div> -->
+                <div class="input-container">
+                    <section>
+                        <!-- <h3>Hello Hoosiers, Welcome!!</h3> -->
+                        <div class="info">
+                            <h4>Please fill the below field, and get your Profile Evaluated for MS in US For Free!</h4>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="buttons">
+                            <form method="post" action="/recommend2">
+                                <label for="GRE">GRE Score:</label>
+                                <input type="number" id="grescore" name="grescore" min="260" max="'340" placeholder= "GRE Score" required>
+                                <br>
+                                <br>
+                                <label for="option">English Proficiency:</label>
+                                <select id="option" name="option" required>
+                                    <option value="TOEFL">TOEFL</option>
+                                    <option value="IELTS">IELTS</option>
+                                </select><label for="EP">  </label><input type="number" id="EP" name="EP" step="0.1" min="0" placeholder = "English Proficiency" oninput="updateOptionValue()" required>
+                                <script>
+                                    function updateOptionValue() {
+                                    var option = document.getElementById("option");
+                                    var input = document.getElementById("EP");
+                                    option.value : input.value;
+                                    }
+                                </script>
+                                <br>
+                                <br>
+                                <label for="sop/lor">SOP and LOR strength (Out of 5):</label>
+                                <input type="number" id="sop/lor" name="sop/lor" min="0" max="5" step="0.01" required>
+                                <br>
+                                <br>
+                                <label for="gpa">Undergraduation GPA:</label> <input type="number" id="gpa" name="gpa" min="0" max="10" step='0.001' placeholder="Out of 10" required>
+                                <br>
+                                <br>
+                                <label for="publications">Number of relevant publications:</label>
+                                <input type="number" min="'0" name="publications" id="publications" placeholder="No. of. Publications."  required>
+                                <br>
+                                <br>
+                                <input type="submit" value="Submit">
+                            </form>        
+                        </div>
+                        <div class="ouptut-container ">
+                            <p>{{content}}</p>
+                            <p>{{content2}}</p>
+                            <p>{{content3}}</p>
+                        </div>
+                    </section>
+                </div>
+            </main>  
+        </div>
+        <hr class="bottom-line"/>
+        <footer>
+            <p>THANK YOU!</p>
+        </footer>
+    </body>
+</html>
