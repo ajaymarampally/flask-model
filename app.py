@@ -1,27 +1,16 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 25 21:53:03 2023
-
-@author: anuragsangem
-"""
-
 from flask import Flask,render_template,request
 import pickle
 import pandas as pd
 import numpy as np
 from sklearn.neighbors import NearestNeighbors
+import os
 
-#/Users/anuragsangem/model.pkl
 model = pickle.load(open('model2.pkl','rb'))
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello World"    
-    #return render_template('homepage.html')
-
-
+    return "Hello World"
 
 @app.route('/predict', methods=['POST'])
 def predict_placement():
@@ -95,8 +84,6 @@ def run_knn(weights, data, test_data, df):
     # Return the recommended universities
     return distances, indices, universities
 
-
-
 @app.route('/recommend2', methods=['POST'])
 def recommend_universities():
     #add here
@@ -151,9 +138,5 @@ def recommend_universities():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
-
-
-    # prediction
-    #result = model.predict(np.array([gre_total,ielts_or_toefl,grade,publications]).reshape(1,4))
-    #return str(result)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
