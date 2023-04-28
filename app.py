@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello World"
+    return render_template('homepage.html')
 
 @app.route('/predict', methods=['POST'])
 def predict_placement():
